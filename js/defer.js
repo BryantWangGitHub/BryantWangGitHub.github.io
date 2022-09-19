@@ -46,25 +46,25 @@ $('#search').keydown((e) => {
 });
 
 // 首次获取点赞数
-$.ajax({
-    type: "POST",
-    dataType: "text",
-    url: 'https://lkszj.info/api/get_like_num',
-    error: (res) => {
-    },
-    success: (res) => {
-        like_num_dic = $.parseJSON(res);
-        $('.web-list').find('.web-grid').each(function name(params) {
-            let like_num_id = $(this).attr('id');
-            let like_num = like_num_dic[like_num_id] ? like_num_dic[like_num_id] : 0;
-            $(this).find('.like-num').text(like_num);
-            let data_content = $(this).find('div').attr('data-content');
-            data_content = data_content.replace('>0<', `>${like_num}<`);
-            $(this).find('div').attr('data-content', data_content);
-            $grid.isotope('updateSortData', $grid.children());
-        });
-    }
-});
+// $.ajax({
+//     type: "POST",
+//     dataType: "text",
+//     url: 'https://lkszj.info/api/get_like_num',
+//     error: (res) => {
+//     },
+//     success: (res) => {
+//         like_num_dic = $.parseJSON(res);
+//         $('.web-list').find('.web-grid').each(function name(params) {
+//             let like_num_id = $(this).attr('id');
+//             let like_num = like_num_dic[like_num_id] ? like_num_dic[like_num_id] : 0;
+//             $(this).find('.like-num').text(like_num);
+//             let data_content = $(this).find('div').attr('data-content');
+//             data_content = data_content.replace('>0<', `>${like_num}<`);
+//             $(this).find('div').attr('data-content', data_content);
+//             $grid.isotope('updateSortData', $grid.children());
+//         });
+//     }
+// });
 
 // 热度排序
 localStorage.setItem('is_sort_like_num', 1);
