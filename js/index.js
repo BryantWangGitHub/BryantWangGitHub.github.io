@@ -37,6 +37,30 @@ let web_list = [{
     "slogan": "",
     "kind_name": "前端",
     "star": null
+  },{
+    "kind": "web_tec",
+    "id": 5,
+    "title": "掘金",
+    "href": "https://juejin.cn/",
+    "slogan": "",
+    "kind_name": "学习",
+    "star": null
+  },{
+    "kind": "web_tec",
+    "id": 6,
+    "title": "阮一峰's blog",
+    "href": "http://ruanyifeng.com/blog/",
+    "slogan": "",
+    "kind_name": "学习",
+    "star": null
+  },{
+    "kind": "web_tec",
+    "id": 7,
+    "title": "one java blog",
+    "href": "https://www.javadoop.com/",
+    "slogan": "",
+    "kind_name": "学习",
+    "star": null
   }];
 
 // 渲染所有网站卡片
